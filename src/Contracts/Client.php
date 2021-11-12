@@ -217,5 +217,5 @@ interface Client
      * @param string $method Name of the deposit method
      * @return DepositStatus
      */
-    public function getStatusRecentDeposits(string $asset, string $method): StatusRecentDeposits;
+    public function getStatusRecentDeposits(string $asset, string $method): array;
 }
