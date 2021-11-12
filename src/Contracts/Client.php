@@ -213,8 +213,8 @@ interface Client
     /**
      * Retrieve fee information about potential withdrawals for a particular asset, key and amount.
      * @see https://docs.kraken.com/rest/#operation/getStatusRecentDeposits
-     * @param string $asset Asset being withdrawn
-     * @param string $key Withdrawal key name, as set up on your account
+     * @param string $asset Asset being deposited
+     * @param string $method Name of the deposit method
      * @return DepositStatus
      */
     public function getStatusRecentDeposits(string $asset, string $method): StatusRecentDeposits;
