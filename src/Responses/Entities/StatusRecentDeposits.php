@@ -9,6 +9,11 @@ use JMS\Serializer\Annotation\Type;
 class StatusRecentDeposits
 {
     /**
+     * Name of the deposit asset that will be used
+     */
+    public string $asset;
+    
+    /**
      * Name of the deposit method that will be used
      */
     public string $method;
