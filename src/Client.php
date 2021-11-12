@@ -33,6 +33,7 @@ use Butschster\Kraken\Responses\{AccountBalanceResponse,
     TickerInformationResponse,
     TradableAssetPairsResponse,
     TradeBalanceResponse,
+    StatusRecentDepositsResponse,
     WithdrawalInformationResponse};
 use Butschster\Kraken\ValueObjects\{
     AssetClass, AssetPair, TradableInfo
@@ -311,6 +312,19 @@ final class Client implements Contracts\Client
                 'asset' => $asset,
                 'key' => $key,
                 'amount' => (string) $amount
+            ]
+        )->result;
+    }
+    
+    /** @inheritDoc */
+    public function getStatusRecentDeposits(string $asset, string $method): StatusRecentDeposits
+    {
+        return $this->request(
+            'private/DepositStatus',
+            StatusRecentDepositsResponse::class,
+            [
+                'asset' => $asset,
+                'method' => (string) $method
             ]
         )->result;
     }
