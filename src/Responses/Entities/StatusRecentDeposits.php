@@ -3,19 +3,19 @@ declare(strict_types=1);
 
 namespace Butschster\Kraken\Responses\Entities;
 
-use Brick\Math\BigDecimal;
 use JMS\Serializer\Annotation\Type;
 
 class StatusRecentDeposits
 {
-    /**
-     * Name of the deposit asset that will be used
-     */
-    public string $asset;
-    
-    /**
-     * Name of the deposit method that will be used
-     */
     public string $method;
+    public string $aclass;
+    public string $asset;
+    public string $refid;
+    public string $txid;
+    public string $info;
+    public string $amount;
+    public string $fee;
+    public string $time;
+    public string $status;
 
 }
