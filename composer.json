@@ -1,5 +1,5 @@
 {
-  "name": "butschster/kraken-api-client",
+  "name": "eonlab/kraken-api-client",
   "type": "library",
   "description": "The most powerful and extendable REST API / Websocket client for Kraken.com. Built on PHP8.0",
   "keywords": [
@@ -35,7 +35,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Butschster\\Kraken\\": "src/"
+      "Eonlab\\Kraken\\": "src/"
     }
   },
   "autoload-dev": {
@@ -46,7 +46,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Butschster\\Kraken\\KrakenServiceProvider"
+        "Eonlab\\Kraken\\KrakenServiceProvider"
       ]
     }
   }
