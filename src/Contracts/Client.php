@@ -19,6 +19,7 @@ use Butschster\Kraken\Responses\Entities\TradableAsset;
 use Butschster\Kraken\Responses\Entities\TradeBalance;
 use Butschster\Kraken\Responses\Entities\WebsocketToken;
 use Butschster\Kraken\Responses\Entities\WithdrawalInformation;
+use Butschster\Kraken\Responses\Entities\StatusRecentDeposits;
 use Butschster\Kraken\ValueObjects\AssetClass;
 use Butschster\Kraken\ValueObjects\AssetPair;
 use Butschster\Kraken\ValueObjects\TradableInfo;
@@ -208,4 +209,13 @@ interface Client
      * @return WithdrawalInformation
      */
     public function getWithdrawalInformation(string $asset, string $key, BigDecimal $amount): WithdrawalInformation;
+    
+    /**
+     * Retrieve fee information about potential withdrawals for a particular asset, key and amount.
+     * @see https://docs.kraken.com/rest/#operation/getStatusRecentDeposits
+     * @param string $asset Asset being withdrawn
+     * @param string $key Withdrawal key name, as set up on your account
+     * @return DepositStatus
+     */
+    public function getStatusRecentDeposits(string $asset, string $method): StatusRecentDeposits;
 }
