@@ -317,14 +317,14 @@ final class Client implements Contracts\Client
     }
     
     /** @inheritDoc */
-    public function getStatusRecentDeposits(string $asset, string $method): StatusRecentDeposits
+    public function getStatusRecentDeposits(string $asset): StatusRecentDeposits
     {
         return $this->request(
             'private/DepositStatus',
             StatusRecentDepositsResponse::class,
             [
                 'asset' => $asset,
-                'method' => (string) $method
+              //  'method' => (string) $method
             ]
         )->result;
     }
